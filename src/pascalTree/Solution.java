@@ -24,6 +24,16 @@ public class Solution {
     
     public static void main(String args[]){
     	Solution sol = new Solution();
-    	sol.generate(4);
+    	Scanner scan = new Scanner(System.in);
+    	int num = scan.nextInt();
+    	List<List<Integer>> list = sol.generate(num);
+    	//Print the list
+    	for (List<Integer> n:list){
+    		for(int val:n){
+    			System.out.print(val+" ");
+    		}
+    		System.out.println();
+    		
+    	}
     }
 }
