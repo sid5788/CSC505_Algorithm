@@ -2,6 +2,44 @@
 
 package substringS;
 
+/*Better solution:
+ static int palindrome(String str) {
+        String temp;
+        char[] s = str.toCharArray();
+        int len = s.length;
+        int left = 0, right = 0;
+        HashMap <String, Integer> map = new HashMap<String,Integer>();
+        for (int i = 0; i<len; i++){
+            left =i;
+            right = i;
+            while(left>=0 && right<len){
+                if (s[left]!=s[right]){
+                    break;
+                }
+                temp = str.substring(left,right+1);
+                map.put(temp,1);
+                left--;
+                right++;
+            }
+        }
+        
+        for (int i = 0; i<len-1; i++){
+            left =i;
+            right = i+1;
+            while(left>=0 && right<len){
+                if (s[left]!=s[right]){
+                    break;
+                }
+                temp = str.substring(left,right+1);
+                map.put(temp,1);
+                left--;
+                right++;
+            }
+        }
+       
+        return map.size();
+    }
+ */
 import java.util.*;
 import java.io.*;
 
